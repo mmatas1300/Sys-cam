@@ -1,12 +1,16 @@
 #include <Servo.h>
-
+//=======================//
+//======Vars Servo 1=====//
+//======================//
 Servo MyServo1;
 int pinServo1 = 9;
 long positionServo1 = 1500;
 int directionServo1 = 0; // 0-left - 1-right
-
 unsigned long previousMillis1 = 0;
-unsigned long await1 = 50;//Definir rango
+unsigned long await1 = 1;//Definir rango
+
+//======Vars Global=====//
+unsigned long currentMillis = 0;
 
 void setup()
 {
@@ -16,13 +20,16 @@ void setup()
 
 void loop()
 {
+  currentMillis = millis();
 	trajectoryServo1();
 }
 
+//=======================//
+//======Servo 1 rutina=====//
+//======================//
+
 void trajectoryServo1()
 {
-	unsigned long currentMillis = millis();
-
 	if (currentMillis - previousMillis1 > await1)
 	{
 		if (directionServo1 == 0)
