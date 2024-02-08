@@ -17,7 +17,6 @@ void setup()
 {
 	MyServo1.attach(pinServo1);
 	MyServo1.writeMicroseconds(1500); // set servo to mid-point
-  Serial.begin(9600);
 }
 
 void loop()
@@ -42,7 +41,6 @@ void trajectoryServo1()
 	{
     int potRange = analogRead(A1); //lectura analógica
     range1 = map(potRange,0,1023,0,840); 
-    Serial.println(range1); //primera variable a mostrar
 
 		if (directionServo1 == 0)
 		{
