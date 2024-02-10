@@ -5,19 +5,19 @@ Servo myservo;
 void setup()
 {
   myservo.attach(9);
-  myservo.writeMicroseconds(700);  // set servo to mid-point
+  myservo.writeMicroseconds(1450);  // set servo to mid-point
 }
 
 void loop() {
 
-  for(int i = 700; i<=2300 ;i++ ){
+  for(int i = 600; i<2300 ;i++ ){
     myservo.writeMicroseconds(i);
-    delay(5);
+    delay(1);
   }
 
-  for(int i = 2299; i>700 ;i-- ){
+  for(int i = 2300; i>600 ;i-- ){
     myservo.writeMicroseconds(i);
-    delay(5);
+    delay(1);
   }
 
 
