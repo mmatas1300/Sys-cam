@@ -20,7 +20,7 @@
 
 SoftwareSerial blue(2, 3);   //Crea conexion al bluetooth - PIN 2 a TX y PIN 3 a RX
 
-char NOMBRE[21]  = "Alfred kkk"; // Nombre de 20 caracteres maximo
+char NOMBRE[21]  = "Cams C"; // Nombre de 20 caracteres maximo
 char BPS         = '4';     // 1=1200 , 2=2400, 3=4800, 4=9600, 5=19200, 6=38400, 7=57600, 8=115200
 char PASS[5]    = "1234";   // PIN O CLAVE de 4 caracteres numericos     
  

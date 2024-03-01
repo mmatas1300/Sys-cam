@@ -121,10 +121,10 @@ void getParamsBT()
 
 void trajectoryServo1BT()
 {
-  await1 = map(vCam1,0,100,0,30); //función map para escalamiento
+  await1 = map(vCam1,0,100,50,0); //función map para escalamiento
 	if (currentMillis - previousMillis1 > await1)
 	{
-    range1 = map(aCam1,0,100,0,840); 
+    range1 = map(aCam1,0,100,840,0); 
 
 		if (directionServo1 == 0)
 		{
@@ -155,11 +155,11 @@ void trajectoryServo1BT()
 
 void trajectoryServo2BT()
 {
-  await2 = map(vCam2,0,100,0,30); //función map para escalamiento
+  await2 = map(vCam2,0,100,50,0); //función map para escalamiento
 
 	if (currentMillis - previousMillis2 > await2)
 	{
-    range2 = map(aCam2,0,100,0,840); 
+    range2 = map(aCam2,0,100,840,0); 
 
 		if (directionServo2 == 0)
 		{
@@ -190,11 +190,11 @@ void trajectoryServo2BT()
 
 void trajectoryServo3BT()
 {
-  await3 = map(vCam3,0,100,0,30); 
+  await3 = map(vCam3,0,100,50,0); 
 
 	if (currentMillis - previousMillis3 > await3)
 	{ 
-    range3 = map(aCam3,0,100,0,840); 
+    range3 = map(aCam3,0,100,840,0); 
 
 		if (directionServo3 == 0)
 		{
@@ -227,12 +227,12 @@ void trajectoryServo1()
 {
   int potAwait = analogRead(A0); //lectura analógica
 
-  await1 = map(potAwait,0,1023,0,30); //función map para escalamiento
+  await1 = map(potAwait,0,1023,50,0); //función map para escalamiento
 
 	if (currentMillis - previousMillis1 > await1)
 	{
     int potRange = analogRead(A1); //lectura analógica
-    range1 = map(potRange,0,1023,0,840); 
+    range1 = map(potRange,0,1023,840,0); 
 
 		if (directionServo1 == 0)
 		{
@@ -264,12 +264,12 @@ void trajectoryServo1()
 void trajectoryServo2()
 {
   int potAwait = analogRead(A2); //lectura analógica
-  await2 = map(potAwait,0,1023,0,30); //función map para escalamiento
+  await2 = map(potAwait,0,1023,50,0); //función map para escalamiento
 
 	if (currentMillis - previousMillis2 > await2)
 	{
     int potRange = analogRead(A3); //lectura analógica
-    range2 = map(potRange,0,1023,0,840); 
+    range2 = map(potRange,0,1023,840,0); 
 
 		if (directionServo2 == 0)
 		{
@@ -302,12 +302,12 @@ void trajectoryServo3()
 {
   int potAwait = analogRead(A4); 
 
-  await3 = map(potAwait,0,1023,0,30); 
+  await3 = map(potAwait,0,1023,50,0); 
 
 	if (currentMillis - previousMillis3 > await3)
 	{
     int potRange = analogRead(A5); 
-    range3 = map(potRange,0,1023,0,840); 
+    range3 = map(potRange,0,1023,840,0); 
 
 		if (directionServo3 == 0)
 		{
